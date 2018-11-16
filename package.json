@@ -1,0 +1,25 @@
+{
+  "name": "tbtstl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "engines": {
+    "node": "9.11.1",
+    "npm": "6.4.1"
+  },
+  "dependencies": {
+    "create-elm-app": "2.2.3",
+    "serve": "10.1.1"
+  },
+  "scripts": {
+    "start": "serve -s build",
+    "test": "elm-app test",
+    "build": "elm-app build",
+    "heroku-postbuild": "npm run build"
+  },
+  "author": "Tyson Battistella",
+  "license": "ISC"
+}

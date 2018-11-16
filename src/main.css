@@ -1,0 +1,104 @@
+html {
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  overflow-x: hidden;
+  position: relative;
+  
+  background-color: #F4F4F4;
+  color: #4660AD;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+img {
+  margin: 20px 0;
+  max-width: 200px;
+}
+
+li {
+  list-style: none;
+  margin-left: 0;
+  margin-top: 5px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.hero-text {
+  margin-top: 50px;
+  text-align: center;
+  margin-right: auto;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.content.hide {
+  display: none;
+}
+
+.content {
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #4660AD;
+  color: #333333;
+
+  box-shadow: 5px 5px 0px 2px #4660AD;
+}
+
+.content > a {
+  color: #4660AD;
+}
+
+div.book {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+}
+
+div.book-year {
+  height: 100%;
+  margin-left: 5px;
+}
+
+div.book-meta {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+div.book-title {
+  width: 100%;
+  color: #4660AD;
+}
+
+div.book-author {
+  width: 100%;
+}
+

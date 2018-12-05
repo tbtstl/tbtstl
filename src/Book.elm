@@ -14,7 +14,8 @@ type alias Book =
 
 books : List Book
 books =
-    [ Book "Why We Sleep: Unlocking the Power of Sleep and Dreams" "Matthew Walker" 2018 9
+    [ Book "When Breath Becomes Air" "Paul Kalanithi" 2018 9
+    , Book "Why We Sleep: Unlocking the Power of Sleep and Dreams" "Matthew Walker" 2018 9
     , Book "A Wild Sheep Chase" "Haruki Murakami" 2018 10
     , Book "Pinball" "Haruki Murakami" 2018 7
     , Book "Hear the Wind Sing" "Haruki Murakami" 2018 8

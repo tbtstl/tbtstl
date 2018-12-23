@@ -1,7 +1,7 @@
 module Book exposing (bookContent)
 
-import Html exposing (Html, div, text)
-import Html.Attributes exposing (class)
+import Html exposing (Html, a, div, text)
+import Html.Attributes exposing (class, href, rel, target)
 
 
 type alias Book =
@@ -9,23 +9,24 @@ type alias Book =
     , author : String
     , yearRead : Int
     , rating : Int
+    , href : String
     }
 
 
 books : List Book
 books =
-    [ Book "When Breath Becomes Air" "Paul Kalanithi" 2018 9
-    , Book "Why We Sleep: Unlocking the Power of Sleep and Dreams" "Matthew Walker" 2018 9
-    , Book "A Wild Sheep Chase" "Haruki Murakami" 2018 10
-    , Book "Pinball" "Haruki Murakami" 2018 7
-    , Book "Hear the Wind Sing" "Haruki Murakami" 2018 8
-    , Book "Meditations" "Marcus Aurelius" 2018 7
-    , Book "How to Say No Without Feeling Guilty" "Patti Breitman/Connie Hatch" 2018 6
-    , Book "The Culture Code" "Daniel Coyle" 2018 7
-    , Book "Antifragile" "Nassim Nicholas Taleb" 2018 10
-    , Book "The Black Swan" "Nassim Nicholas Taleb" 2018 9
-    , Book "Sapiens: A Brief History of Humankind" "Yuval Noah Harari" 2018 9
-    , Book "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future" "Ashlee Vance" 2018 8
+    [ Book "When Breath Becomes Air" "Paul Kalanithi" 2018 7 "https://amzn.to/2AgIyQG"
+    , Book "Why We Sleep: Unlocking the Power of Sleep and Dreams" "Matthew Walker" 2018 9 "https://amzn.to/2RdjdAR"
+    , Book "A Wild Sheep Chase" "Haruki Murakami" 2018 10 "https://amzn.to/2rUcBcg"
+    , Book "Pinball" "Haruki Murakami" 2018 7 "https://amzn.to/2Lzg9cZ"
+    , Book "Hear the Wind Sing" "Haruki Murakami" 2018 8 "https://amzn.to/2Shuu0x"
+    , Book "Meditations" "Marcus Aurelius" 2018 7 "https://amzn.to/2Sgm49t"
+    , Book "How to Say No Without Feeling Guilty" "Patti Breitman/Connie Hatch" 2018 6 "https://amzn.to/2CxkStb"
+    , Book "The Culture Code" "Daniel Coyle" 2018 7 "https://amzn.to/2SgdPdF"
+    , Book "Antifragile" "Nassim Nicholas Taleb" 2018 10 "https://amzn.to/2V9ba7h"
+    , Book "The Black Swan" "Nassim Nicholas Taleb" 2018 9 "https://amzn.to/2LzfXdL"
+    , Book "Sapiens: A Brief History of Humankind" "Yuval Noah Harari" 2018 9 "https://amzn.to/2LxkvS7"
+    , Book "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future" "Ashlee Vance" 2018 7 "https://amzn.to/2V5KYuj"
     ]
 
 
@@ -34,7 +35,7 @@ bookEl book =
     div [ class "book" ]
         [ div [ class "book-year" ] [ text (String.fromInt book.yearRead) ]
         , div [ class "book-meta" ]
-            [ div [ class "book-title" ] [ text book.title ]
+            [ div [ class "book-title" ] [ a [ href book.href, target "blank", rel "noopener noreferrer" ] [ text book.title ] ]
             , div [ class "book-author" ] [ text book.author ]
             , div [ class "book-rating" ] [ text (String.fromInt book.rating ++ "/10") ]
             ]

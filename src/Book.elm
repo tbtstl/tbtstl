@@ -39,7 +39,7 @@ bookEl book =
         , div [ class "book-meta" ]
             [ div [ class "book-title" ] [ a [ href book.href, target "blank", rel "noopener noreferrer" ] [ text book.title ] ]
             , div [ class "book-author" ] [ text book.author ]
-            , div [ class "book-rating" ] [ text (String.fromInt book.rating ++ " / 10") ]
+            , div [ class "book-rating" ] [ text (String.fromInt book.rating ++ "/10") ]
             ]
         ]
 

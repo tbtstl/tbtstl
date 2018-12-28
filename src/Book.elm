@@ -15,7 +15,9 @@ type alias Book =
 
 books : List Book
 books =
-    [ Book "When Breath Becomes Air" "Paul Kalanithi" 2018 7 "https://amzn.to/2AgIyQG"
+    [ Book "The Hard Thing About Hard Things" "Ben Horowitz" 2018 8 "https://amzn.to/2BMOJfl"
+    , Book "Skin in the Game: Hidden Asymmetries in Daily Life" "Nassim Nicholas Taleb" 2018 9 "https://amzn.to/2BKou9m"
+    , Book "When Breath Becomes Air" "Paul Kalanithi" 2018 7 "https://amzn.to/2AgIyQG"
     , Book "Why We Sleep: Unlocking the Power of Sleep and Dreams" "Matthew Walker" 2018 9 "https://amzn.to/2RdjdAR"
     , Book "A Wild Sheep Chase" "Haruki Murakami" 2018 10 "https://amzn.to/2rUcBcg"
     , Book "Pinball" "Haruki Murakami" 2018 7 "https://amzn.to/2Lzg9cZ"
@@ -37,7 +39,7 @@ bookEl book =
         , div [ class "book-meta" ]
             [ div [ class "book-title" ] [ a [ href book.href, target "blank", rel "noopener noreferrer" ] [ text book.title ] ]
             , div [ class "book-author" ] [ text book.author ]
-            , div [ class "book-rating" ] [ text (String.fromInt book.rating ++ "/10") ]
+            , div [ class "book-rating" ] [ text (String.fromInt book.rating ++ " / 10") ]
             ]
         ]
 

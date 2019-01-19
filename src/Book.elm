@@ -15,7 +15,8 @@ type alias Book =
 
 books : List Book
 books =
-    [ Book "Stories of Your Life and Others" "Ted Chiang" 2019 10 "https://amzn.to/2FGwV9e"
+    [ Book "Straw Dogs: Thoughts on Humans and Other Animals" "John Gray" 2019 9 "https://amzn.to/2FHzTKS"
+    , Book "Stories of Your Life and Others" "Ted Chiang" 2019 10 "https://amzn.to/2FGwV9e"
     , Book "The Hard Thing About Hard Things" "Ben Horowitz" 2018 8 "https://amzn.to/2BMOJfl"
     , Book "Skin in the Game: Hidden Asymmetries in Daily Life" "Nassim Nicholas Taleb" 2018 9 "https://amzn.to/2BKou9m"
     , Book "When Breath Becomes Air" "Paul Kalanithi" 2018 7 "https://amzn.to/2AgIyQG"

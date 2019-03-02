@@ -15,7 +15,9 @@ type alias Book =
 
 books : List Book
 books =
-    [ Book "Straw Dogs: Thoughts on Humans and Other Animals" "John Gray" 2019 9 "https://amzn.to/2FHzTKS"
+    [ Book "The Master Switch: The Rise and Fall of Information Empires" "Tim Wu" 2019 8 "https://amzn.to/2tLIzsg"
+    , Book "Mastering Ethereum: Building Smart Contracts and DApps" "Andreas M. Antonopoulos" 2019 7 "https://amzn.to/2VyHr7f"
+    , Book "Straw Dogs: Thoughts on Humans and Other Animals" "John Gray" 2019 9 "https://amzn.to/2FHzTKS"
     , Book "Stories of Your Life and Others" "Ted Chiang" 2019 10 "https://amzn.to/2FGwV9e"
     , Book "The Hard Thing About Hard Things" "Ben Horowitz" 2018 8 "https://amzn.to/2BMOJfl"
     , Book "Skin in the Game: Hidden Asymmetries in Daily Life" "Nassim Nicholas Taleb" 2018 9 "https://amzn.to/2BKou9m"

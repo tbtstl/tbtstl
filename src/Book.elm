@@ -15,7 +15,8 @@ type alias Book =
 
 books : List Book
 books =
-    [ Book "The Master Switch: The Rise and Fall of Information Empires" "Tim Wu" 2019 8 "https://amzn.to/2tLIzsg"
+    [ Book "Digital Minimalism: Choosing a Focused Life in a Noisy World" "Cal Newport" 2019 10 "https://amzn.to/2EseoLR"
+    , Book "The Master Switch: The Rise and Fall of Information Empires" "Tim Wu" 2019 8 "https://amzn.to/2tLIzsg"
     , Book "Mastering Ethereum: Building Smart Contracts and DApps" "Andreas M. Antonopoulos" 2019 7 "https://amzn.to/2VyHr7f"
     , Book "Straw Dogs: Thoughts on Humans and Other Animals" "John Gray" 2019 9 "https://amzn.to/2FHzTKS"
     , Book "Stories of Your Life and Others" "Ted Chiang" 2019 10 "https://amzn.to/2FGwV9e"

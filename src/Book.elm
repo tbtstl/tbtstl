@@ -15,7 +15,8 @@ type alias Book =
 
 books : List Book
 books =
-    [ Book "Norwegian Wood" "Haruki Murakami" 2019 9 "https://amzn.to/2OP7gxH"
+    [ Book "Stubborn Attachments: A Vision for a Society of Free, Prosperous, and Responsible Individuals" "Tyler Cowen" 2019 8 "https://amzn.to/2UBqeht"
+    , Book "Norwegian Wood" "Haruki Murakami" 2019 9 "https://amzn.to/2OP7gxH"
     , Book "Hackers & Painters: Big Ideas from the Computer Age" "Paul Graham" 2019 8 "https://amzn.to/2Tv3wC9"
     , Book "Digital Minimalism: Choosing a Focused Life in a Noisy World" "Cal Newport" 2019 10 "https://amzn.to/2EseoLR"
     , Book "The Master Switch: The Rise and Fall of Information Empires" "Tim Wu" 2019 8 "https://amzn.to/2tLIzsg"

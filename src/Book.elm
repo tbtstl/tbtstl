@@ -15,7 +15,8 @@ type alias Book =
 
 books : List Book
 books =
-    [ Book "Writing Down the Bones: Freeing the Writer Within" "Natalie Goldberg" 2019 8 "https://amzn.to/2MaDLc8"
+    [ Book "The Gervais Principle" "Venkatesh Rao" 2019 8 "https://www.amazon.com/gp/product/B00F9IV64W"
+    , Book "Writing Down the Bones: Freeing the Writer Within" "Natalie Goldberg" 2019 8 "https://amzn.to/2MaDLc8"
     , Book "Stubborn Attachments: A Vision for a Society of Free, Prosperous, and Responsible Individuals" "Tyler Cowen" 2019 8 "https://amzn.to/2UBqeht"
     , Book "Norwegian Wood" "Haruki Murakami" 2019 9 "https://amzn.to/2OP7gxH"
     , Book "Hackers & Painters: Big Ideas from the Computer Age" "Paul Graham" 2019 8 "https://amzn.to/2Tv3wC9"

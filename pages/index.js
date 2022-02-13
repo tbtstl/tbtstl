@@ -1,8 +1,9 @@
 import React from 'react'
-import Head from 'next/dist/next-server/lib/head'
+import Head from 'next/head'
 import styled from 'styled-components'
 import SketchWrapper from '../components/SketchWrapper'
 import defaultSketch from '../sketches/defaultSketch'
+import {BaseLink} from '../components/BaseLink'
 
 const BOOKS = [
   {
@@ -257,14 +258,6 @@ const InfoContainer = styled.div`
 
 const linkProps = {target: '_blank', rel: 'noopener noreferrer'}
 
-const Link = styled.a`
-  color: inherit;
-
-  &:visited {
-    color: inherit;
-  }
-`
-
 const Frame = styled.iframe`
   width: 100% !important;
   height: 100% !important;
@@ -289,23 +282,23 @@ const Home = () => (
       <InfoContainer>
         <div><Bold>About</Bold></div>
         <div><Text>
-          tbtstl is co-founder and CTO of <Link {...linkProps} href={'https://zora.co'}>Zora</Link>.<br/>
-          Previously, <Link {...linkProps} href={'https://commerce.coinbase.com'}>Coinbase
-          Commerce</Link> and <Link {...linkProps} href={'https://telmediq.com'}>Telmediq</Link>.<br/>
-          Also, some things on <Link {...linkProps} href={'https://github.com/tbtstl'}>Github</Link>.
+          tbtstl is co-founder and CTO of <BaseLink {...linkProps} href={'https://zora.co'}>Zora</BaseLink>.<br/>
+          Previously, <BaseLink {...linkProps} href={'https://commerce.coinbase.com'}>Coinbase
+          Commerce</BaseLink> and <BaseLink {...linkProps} href={'https://telmediq.com'}>Telmediq</BaseLink>.<br/>
+          Also, some things on <BaseLink {...linkProps} href={'https://github.com/tbtstl'}>Github</BaseLink>.
         </Text></div>
         <div><Bold>Contact</Bold></div>
         <div><Text>
-          <Link {...linkProps} href={'https://zora.co/tyson'}>zora</Link> <br/>
-          <Link {...linkProps} href={'https://github.com/tbtstl'}>github</Link> <br/>
-          <Link {...linkProps} href={'https://twitter.com/tbtstl'}>twitter</Link> <br/>
+          <BaseLink {...linkProps} href={'https://zora.co/tyson'}>zora</BaseLink> <br/>
+          <BaseLink {...linkProps} href={'https://github.com/tbtstl'}>github</BaseLink> <br/>
+          <BaseLink {...linkProps} href={'https://twitter.com/tbtstl'}>twitter</BaseLink> <br/>
         </Text></div>
         <div><Bold>Reading</Bold></div>
         <div>
           {BOOKS.map((book, idx) => (
             <Text key={idx} mb>
               {book.year} <br/>
-              <Link {...linkProps} href={book.href}>{book.title}</Link><br/>
+              <BaseLink {...linkProps} href={book.href}>{book.title}</BaseLink><br/>
               {book.author} <br/>
             </Text>
           ))}

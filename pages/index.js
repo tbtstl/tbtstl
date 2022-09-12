@@ -3,9 +3,114 @@ import Head from 'next/head'
 import styled from 'styled-components'
 import SketchWrapper from '../components/SketchWrapper'
 import defaultSketch from '../sketches/defaultSketch'
-import {BaseLink} from '../components/BaseLink'
+import { BaseLink } from '../components/BaseLink'
 
 const BOOKS = [
+  {
+    title: '722 Miles: The Building of the Subways and How They Transformed New York',
+    author: 'Clifton Hood',
+    rating: '8',
+    year: '2022',
+    href: 'https://www.amazon.com/gp/product/0801880548/'
+  },
+  {
+    title: 'What I Talk About When I Talk About Running: A Memoir',
+    author: 'Haruki Murakami',
+    rating: '8',
+    year: '2022',
+    href: 'https://www.amazon.com/gp/product/0307389839/'
+  },
+  {
+    title: 'The End of the World Is Just the Beginning: Mapping the Collapse of Globalization',
+    author: 'Peter Zeihan',
+    rating: '8',
+    year: '2022',
+    href: 'https://www.amazon.com/gp/product/006323047X/'
+  },
+  {
+    title: 'The Network State: How to Start a New Country',
+    author: 'Balaji Srinivasan',
+    rating: '8',
+    year: '2022',
+    href: 'https://www.amazon.com/gp/product/B09VPKZR3G/'
+  },
+  {
+    title: 'Trillion Dollar Coach: The Leadership Playbook of Silicon Valley\'s Bill Campbell',
+    author: 'Eric Schmidt',
+    rating: '8',
+    year: '2022',
+    href: 'https://www.amazon.com/gp/product/B076ZHG3H3/'
+  },
+  {
+    title: 'Thinking in Systems',
+    author: 'Donella H. Meadows',
+    rating: '8',
+    year: '2022',
+    href: 'https://www.amazon.com/gp/product/1603580557/'
+  },
+  {
+    title: 'A City is not a Tree',
+    author: 'Christopher Alexander',
+    rating: '8',
+    year: '2022',
+    href: 'https://www.amazon.com/gp/product/B075FFM2PM'
+  },
+  {
+    title: 'Principles for Dealing with the Changing World Order: Why Nations Succeed and Fail',
+    author: 'Ray Dalio',
+    rating: '8',
+    year: '2022',
+    href: 'https://www.amazon.com/gp/product/B0881Y73YG/'
+  },
+  {
+    title: 'Simulacra and Simulation (The Body, In Theory: Histories of Cultural Materialism)',
+    author: 'Jean Baudrillard',
+    rating: '8',
+    year: '2020',
+    href: 'https://www.amazon.com/gp/product/0472065211'
+  },
+  {
+    title: 'Kafka on the Shore',
+    author: 'Haruki Murakami',
+    rating: '8',
+    year: '2020',
+    href: 'https://www.amazon.com/gp/product/B000FC2ROU'
+  },
+  {
+    title: 'A Pattern Language: Towns, Buildings, Construction',
+    author: 'Christopher Alexander',
+    rating: '8',
+    year: '2020',
+    href: 'https://www.amazon.com/gp/product/0195019199/'
+  },
+  {
+    title: 'The Timeless Way of Building',
+    author: 'Christopher Alexander',
+    rating: '8',
+    year: '2020',
+    href: 'https://www.amazon.com/gp/product/0195024028'
+  },
+  {
+    title: 'Computational Drawing: From Foundational Exercises to Theories of Representation',
+    author: 'Carl Lostritto',
+    rating: '8',
+    year: '2020',
+    href: 'https://www.amazon.com/gp/product/1940743265/'
+  },
+  {
+    title: 'Blueprint: The Evolutionary Origins of a Good Society',
+    author: 'Nicholas A. Christakis',
+    rating: '8',
+    year: '2020',
+    href: 'https://www.amazon.com/gp/product/B07F67B9P4/'
+  },
+  {
+    title: 'Metamagical Themas: Questing For The Essence Of Mind And Pattern',
+    author: 'Douglas Hofstadter',
+    rating: '8',
+    year: '2020',
+    href: 'https://www.amazon.com/gp/product/B01DWVB44E/',
+  },
   {
     title: 'The Hundred-Year Marathon: China\'s Secret Strategy to Replace America as the Global Superpower',
     author: 'Michael Pillsbury',
@@ -256,7 +361,7 @@ const InfoContainer = styled.div`
   max-width: 400px;
 `
 
-const linkProps = {target: '_blank', rel: 'noopener noreferrer'}
+const linkProps = { target: '_blank', rel: 'noopener noreferrer' }
 
 const Frame = styled.iframe`
   width: 100% !important;
@@ -271,35 +376,35 @@ const Home = () => (
   <div>
     <Head>
       <title>tbtstl</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <Container>
       <Bold>tbtstl</Bold>
       <Text>Building Things</Text>
       <CanvasContainer>
-        <SketchWrapper sketch={defaultSketch}/>
+        <SketchWrapper sketch={defaultSketch} />
       </CanvasContainer>
       <InfoContainer>
         <div><Bold>About</Bold></div>
         <div><Text>
-          tbtstl is co-founder and CTO of <BaseLink {...linkProps} href={'https://zora.co'}>Zora</BaseLink>.<br/>
+          tbtstl is co-founder and CTO of <BaseLink {...linkProps} href={'https://zora.co'}>Zora</BaseLink>.<br />
           Previously, <BaseLink {...linkProps} href={'https://commerce.coinbase.com'}>Coinbase
-          Commerce</BaseLink> and <BaseLink {...linkProps} href={'https://telmediq.com'}>Telmediq</BaseLink>.<br/>
+            Commerce</BaseLink> and <BaseLink {...linkProps} href={'https://telmediq.com'}>Telmediq</BaseLink>.<br />
           Also, some things on <BaseLink {...linkProps} href={'https://github.com/tbtstl'}>Github</BaseLink>.
         </Text></div>
         <div><Bold>Contact</Bold></div>
         <div><Text>
-          <BaseLink {...linkProps} href={'https://zora.co/tyson'}>zora</BaseLink> <br/>
-          <BaseLink {...linkProps} href={'https://github.com/tbtstl'}>github</BaseLink> <br/>
-          <BaseLink {...linkProps} href={'https://twitter.com/tbtstl'}>twitter</BaseLink> <br/>
+          <BaseLink {...linkProps} href={'https://zora.co/tyson'}>zora</BaseLink> <br />
+          <BaseLink {...linkProps} href={'https://github.com/tbtstl'}>github</BaseLink> <br />
+          <BaseLink {...linkProps} href={'https://twitter.com/tbtstl'}>twitter</BaseLink> <br />
         </Text></div>
         <div><Bold>Reading</Bold></div>
         <div>
           {BOOKS.map((book, idx) => (
             <Text key={idx} mb>
-              {book.year} <br/>
-              <BaseLink {...linkProps} href={book.href}>{book.title}</BaseLink><br/>
-              {book.author} <br/>
+              {book.year} <br />
+              <BaseLink {...linkProps} href={book.href}>{book.title}</BaseLink><br />
+              {book.author} <br />
             </Text>
           ))}
         </div>

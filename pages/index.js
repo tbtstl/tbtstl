@@ -7,6 +7,13 @@ import { BaseLink } from '../components/BaseLink'
 
 const BOOKS = [
   {
+    title: 'Skunk Works: A Personal Memoir of My Years of Lockheed Kindle Edition',
+    author: 'Leo Janos & Ben R. Rich',
+    rating: '9',
+    year: '2023',
+    href: 'https://www.amazon.com/gp/product/B00A2DIW3C/'
+  },
+  {
     title: '722 Miles: The Building of the Subways and How They Transformed New York',
     author: 'Clifton Hood',
     rating: '8',

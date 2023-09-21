@@ -429,7 +429,7 @@ const Home = () => (
     </Head>
     <Container>
       <Bold>tbtstl</Bold>
-      <Text>Building Things</Text>
+      <Text>Tyson Battistella</Text>
       <CanvasContainer>
         <SketchWrapper sketch={defaultSketch} />
       </CanvasContainer>
@@ -437,9 +437,9 @@ const Home = () => (
         <div><Bold>About</Bold></div>
         <div><Text>
           tbtstl is co-founder and CTO of <BaseLink {...linkProps} href={'https://zora.co'}>Zora</BaseLink>.<br />
-          Previously, <BaseLink {...linkProps} href={'https://commerce.coinbase.com'}>Coinbase
+          Previously built <BaseLink {...linkProps} href={'https://commerce.coinbase.com'}>Coinbase
             Commerce</BaseLink> and <BaseLink {...linkProps} href={'https://telmediq.com'}>Telmediq</BaseLink>.<br />
-          Also, some things on <BaseLink {...linkProps} href={'https://github.com/tbtstl'}>Github</BaseLink>.
+          Also, does some things on <BaseLink {...linkProps} href={'https://github.com/tbtstl'}>Github</BaseLink>.
         </Text></div>
         <div><Bold>Contact</Bold></div>
         <div><Text>

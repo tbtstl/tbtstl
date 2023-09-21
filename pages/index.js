@@ -7,6 +7,48 @@ import { BaseLink } from '../components/BaseLink'
 
 const BOOKS = [
   {
+    title: 'Atatürk: The Biography of the Founder of Modern Turkey',
+    author: 'Andrew Mango',
+    rating: '7',
+    year: '2023',
+    href: 'https://www.amazon.com/gp/product/B07NJ2L85F'
+  },
+  {
+    title: 'Moonwalking with Einstein: The Art and Science of Remembering Everything',
+    author: 'Edward Bernays',
+    rating: '7',
+    year: '2023',
+    href: 'https://www.amazon.com/gp/product/B004H4XI5O'
+  },
+  {
+    title: 'Crystallizing Public Opinion',
+    author: 'Edward Bernays',
+    rating: '7',
+    year: '2023',
+    href: 'https://www.amazon.com/gp/product/193543926X'
+  },
+  {
+    title: 'Six Easy Pieces: Essentials of Physics Explained by Its Most Brilliant Teacher',
+    author: 'Richard P. Feynman',
+    rating: '7',
+    year: '2023',
+    href: 'https://www.amazon.com/gp/product/0465025277'
+  },
+  {
+    title: '1Q84',
+    author: 'Haruki Murakami',
+    rating: '7',
+    year: '2023',
+    href: 'https://www.amazon.com/1Q84-Vintage-International-Haruki-Murakami-ebook/dp/B004LROUW2'
+  },
+  {
+    title: 'Salt: A World History',
+    author: 'Mark Kurlansky',
+    rating: '6',
+    year: '2023',
+    href: 'https://www.amazon.com/Salt-World-History-Mark-Kurlansky/dp/0142001619'
+  },
+  {
     title: 'Skunk Works: A Personal Memoir of My Years of Lockheed Kindle Edition',
     author: 'Leo Janos & Ben R. Rich',
     rating: '9',

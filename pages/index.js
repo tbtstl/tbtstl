@@ -443,7 +443,7 @@ const Home = () => (
         </Text></div>
         <div><Bold>Contact</Bold></div>
         <div><Text>
-          <BaseLink {...linkProps} href={'https://zora.co/tyson'}>zora</BaseLink> <br />
+          <BaseLink {...linkProps} href={'https://zora.co/tyson.eth'}>zora</BaseLink> <br />
           <BaseLink {...linkProps} href={'https://github.com/tbtstl'}>github</BaseLink> <br />
           <BaseLink {...linkProps} href={'https://twitter.com/tbtstl'}>twitter</BaseLink> <br />
         </Text></div>

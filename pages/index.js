@@ -7,6 +7,34 @@ import { BaseLink } from '../components/BaseLink'
 
 const BOOKS = [
   {
+    title: 'Lost Horizon',
+    author: 'James Hilton',
+    rating: '7',
+    year: '2024',
+    href: 'https://www.amazon.com/gp/product/0062113720'
+  },
+  {
+    title: 'An End to Upside Down Thinking',
+    author: 'Mark Gober',
+    rating: '5',
+    year: '2024',
+    href: 'https://www.amazon.com/gp/product/1960583360'
+  },
+  {
+    title: 'Energy and Civilization: A History',
+    author: 'Vaclav Smil',
+    rating: '8',
+    year: '2024',
+    href: 'https://www.amazon.com/gp/product/0262536161'
+  },
+  {
+    title: 'The Ancient City: A Study of the Religion, Laws, and Institutions of Greece and Rome',
+    author: 'Numa Denis Fustel De Coulanges',
+    rating: '8',
+    year: '2024',
+    href: 'https://www.amazon.com/gp/product/B0713STMH3'
+  },
+  {
     title: 'Atatürk: The Biography of the Founder of Modern Turkey',
     author: 'Andrew Mango',
     rating: '7',

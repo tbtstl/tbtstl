@@ -464,10 +464,7 @@ const Home = () => (
       <InfoContainer>
         <div><Bold>About</Bold></div>
         <div><Text>
-          tbtstl is co-founder and CTO of <BaseLink {...linkProps} href={'https://zora.co'}>Zora</BaseLink>.<br />
-          Previously built <BaseLink {...linkProps} href={'https://commerce.coinbase.com'}>Coinbase
-            Commerce</BaseLink> and Telmediq (acq. <BaseLink {...linkProps} href={'https://www.perfectserve.com/'}>PerfectServe</BaseLink>).<br />
-          Also, does some things on <BaseLink {...linkProps} href={'https://github.com/tbtstl'}>Github</BaseLink>.
+          tbtstl is co-founder and CTO of <BaseLink {...linkProps} href={'https://zora.co'}>Zora</BaseLink>.
         </Text></div>
         <div><Bold>Contact</Bold></div>
         <div><Text>

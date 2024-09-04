@@ -7,6 +7,48 @@ import { BaseLink } from '../components/BaseLink'
 
 const BOOKS = [
   {
+    title: 'Seeing Like a State',
+    author: 'James C. Scott',
+    rating: '7',
+    year: '2024',
+    href: 'https://www.amazon.com/Seeing-like-State-Certain-Condition/dp/0300078153',
+  },
+  {
+    title: 'Hegel, Marx, Nietzsche: Or the Realm of Shadows',
+    author: 'Henri Lefebvre',
+    rating: '7',
+    year: '2024',
+    href: 'https://www.amazon.com/Hegel-Marx-Nietzsche-Realm-Shadows-ebook/dp/B07RSN9PYY',
+  },
+  {
+    title: 'First Person Sinuglar',
+    author: 'Haruki Murakami',
+    rating: '7',
+    year: '2024',
+    href: 'https://www.amazon.com/First-Person-Singular-Haruki-Murakami/dp/0593318072'
+  },
+  {
+    title: 'Cat\'s Cradle',
+    author: 'Kurt Vonnegut',
+    rating: '8',
+    year: '2024',
+    href: 'https://www.amazon.com/Cats-Cradle-Novel-Kurt-Vonnegut/dp/038533348X',
+  },
+  {
+    title: 'Fortuny: The Life and Work of Mariano Fortuny',
+    author: 'Guillermo De Osma',
+    rating: '7',
+    year: '2024',
+    href: 'https://www.amazon.com/gp/product/0847817954'
+  },
+  {
+    title: 'The Complete Cosmicomics',
+    author: 'Italo Calvino',
+    rating: '6',
+    year: '2024',
+    href: 'https://www.amazon.com/gp/product/0544577876'
+  },
+  {
     title: 'Lost Horizon',
     author: 'James Hilton',
     rating: '7',

@@ -1,11 +1,18 @@
-import React from 'react'
 import Head from 'next/head'
 import styled from 'styled-components'
 import SketchWrapper from '../components/SketchWrapper'
 import defaultSketch from '../sketches/defaultSketch'
 import { BaseLink } from '../components/BaseLink'
 
-const BOOKS = [
+type Book = {
+  title: string
+  author: string
+  rating: string
+  year: string
+  href: string
+}
+
+const BOOKS: Book[] = [
   {
     title: 'Seeing Like a State',
     author: 'James C. Scott',
@@ -449,12 +456,11 @@ const BOOKS = [
   },
 ]
 
-
 const Container = styled.div`
   margin: 1rem;
 `
 
-const Text = styled.p`
+const Text = styled.p<{ mb?: boolean }>`
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -480,7 +486,7 @@ const InfoContainer = styled.div`
   max-width: 400px;
 `
 
-const linkProps = { target: '_blank', rel: 'noopener noreferrer' }
+const linkProps = { target: '_blank', rel: 'noopener noreferrer' as const }
 
 const Frame = styled.iframe`
   width: 100% !important;
@@ -491,42 +497,42 @@ const Frame = styled.iframe`
   left: 0;
 `
 
-const Home = () => (
-  <div>
-    <Head>
-      <title>tbtstl</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <Container>
-      <Bold>tbtstl</Bold>
-      <Text>Tyson Battistella</Text>
-      <CanvasContainer>
-        <SketchWrapper sketch={defaultSketch} />
-      </CanvasContainer>
-      <InfoContainer>
-        <div><Bold>About</Bold></div>
-        <div><Text>
-          tbtstl is co-founder and CTO of <BaseLink {...linkProps} href={'https://zora.co'}>Zora</BaseLink>.
-        </Text></div>
-        <div><Bold>Contact</Bold></div>
-        <div><Text>
-          <BaseLink {...linkProps} href={'https://zora.co/tyson.eth'}>zora</BaseLink> <br />
-          <BaseLink {...linkProps} href={'https://github.com/tbtstl'}>github</BaseLink> <br />
-          <BaseLink {...linkProps} href={'https://twitter.com/tbtstl'}>twitter</BaseLink> <br />
-        </Text></div>
-        <div><Bold>Reading</Bold></div>
-        <div>
-          {BOOKS.map((book, idx) => (
-            <Text key={idx} mb>
-              {book.year} <br />
-              <BaseLink {...linkProps} href={book.href}>{book.title}</BaseLink><br />
-              {book.author} <br />
-            </Text>
-          ))}
-        </div>
-      </InfoContainer>
-    </Container>
-  </div>
-)
-
-export default Home
+export default function Home() {
+  return (
+    <div>
+      <Head>
+        <title>tbtstl</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <Container>
+        <Bold>tbtstl</Bold>
+        <Text>Tyson Battistella</Text>
+        <CanvasContainer>
+          <SketchWrapper sketch={defaultSketch} />
+        </CanvasContainer>
+        <InfoContainer>
+          <div><Bold>About</Bold></div>
+          <div><Text>
+            tbtstl is co-founder and CTO of <BaseLink {...linkProps} href={'https://zora.co'}>Zora</BaseLink>.
+          </Text></div>
+          <div><Bold>Contact</Bold></div>
+          <div><Text>
+            <BaseLink {...linkProps} href={'https://zora.co/tyson.eth'}>zora</BaseLink> <br />
+            <BaseLink {...linkProps} href={'https://github.com/tbtstl'}>github</BaseLink> <br />
+            <BaseLink {...linkProps} href={'https://twitter.com/tbtstl'}>twitter</BaseLink> <br />
+          </Text></div>
+          <div><Bold>Reading</Bold></div>
+          <div>
+            {BOOKS.map((book, idx) => (
+              <Text key={idx} mb>
+                {book.year} <br />
+                <BaseLink {...linkProps} href={book.href}>{book.title}</BaseLink><br />
+                {book.author} <br />
+              </Text>
+            ))}
+          </div>
+        </InfoContainer>
+      </Container>
+    </div>
+  )
+}

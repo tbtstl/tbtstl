@@ -1,5 +1,12 @@
 class Agent {
-  constructor(p) {
+  p: any
+  vector: any
+  vectorOld: any
+  stepSize: number
+  isOutside: boolean
+  angle: number | undefined
+
+  constructor(p: any) {
     this.p = p
     this.vector = p.createVector(p.random(p.width), p.random(p.height));
     this.vectorOld = this.vector.copy();
@@ -7,7 +14,7 @@ class Agent {
     this.isOutside = false;
   }
 
-  update(strokeWidth) {
+  update(strokeWidth: number) {
     this.vector.x += this.p.cos(this.angle) * this.stepSize;
     this.vector.y += this.p.sin(this.angle) * this.stepSize;
     this.isOutside = this.vector.x < 0 || this.vector.x > this.p.width || this.vector.y < 0 || this.vector.y > this.p.height;
@@ -21,16 +28,16 @@ class Agent {
     this.isOutside = false;
   }
 
-  update1(noiseScale, noiseStrength, strokeWidth) {
+  update1(noiseScale: number, noiseStrength: number, strokeWidth: number) {
     this.angle = this.p.noise(this.vector.x / noiseScale, this.vector.y / noiseScale) * noiseStrength;
     this.update(strokeWidth);
   }
 
-  update2(noiseScale, noiseStrength, strokeWidth) {
+  update2(noiseScale: number, noiseStrength: number, strokeWidth: number) {
     this.angle = this.p.noise(this.vector.x / noiseScale, this.vector.y / noiseScale) * 24;
     this.angle = (this.angle - this.p.floor(this.angle)) * noiseStrength;
     this.update(strokeWidth);
   }
 }
 
-export {Agent}
+export { Agent }

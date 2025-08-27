@@ -1,9 +1,9 @@
-import {p5SizingDefaults} from './utils'
-import {Agent} from './Agent'
+import { p5SizingDefaults } from './utils'
+import { Agent } from './Agent'
 import colors from '../colors'
 
-const defaultSketch = (p) => {
-  const agents = []
+const defaultSketch = (p: any) => {
+  const agents: Agent[] = []
   const agentCount = window.innerWidth
   const noiseScale = 300
   const noiseStrength = 10
@@ -25,10 +25,9 @@ const defaultSketch = (p) => {
     p.noStroke()
     p.rect(0, 0, p.width, p.height)
 
-    // Draw agents
     for (let i = 0; i < agentCount; i++) {
-      p.stroke(agentColors[i%agentColors.length])
-      if(drawMode === 1) {
+      p.stroke(agentColors[i % agentColors.length])
+      if (drawMode === 1) {
         agents[i].update1(noiseScale * Math.random() * 1.1, noiseStrength * Math.random() * 1.1, strokeWidth)
       } else {
         agents[i].update2(noiseScale * Math.random() * 1.1, noiseStrength * Math.random() * 1.1, strokeWidth)

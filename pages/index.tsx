@@ -477,6 +477,8 @@ const Bold = styled.h3`
 
 const CanvasContainer = styled.div`
   width: 100%;
+  aspect-ratio: 1618 / 1000;
+  max-height: 80vh;
 `
 
 const InfoContainer = styled.div`
@@ -521,6 +523,13 @@ export default function Home() {
             <BaseLink {...linkProps} href={'https://github.com/tbtstl'}>github</BaseLink> <br />
             <BaseLink {...linkProps} href={'https://twitter.com/tbtstl'}>twitter</BaseLink> <br />
           </Text></div>
+          <div><Bold>Writing</Bold></div>
+          <div>
+            <Text mb>
+              2025 <br />
+              <BaseLink href={'/true-ideas'}>True Ideas</BaseLink> <br />
+            </Text>
+          </div>
           <div><Bold>Reading</Bold></div>
           <div>
             {BOOKS.map((book, idx) => (

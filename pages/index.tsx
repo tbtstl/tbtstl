@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import styled from 'styled-components'
+import { GetStaticProps } from 'next'
 import SketchWrapper from '../components/SketchWrapper'
 import defaultSketch from '../sketches/defaultSketch'
 import { BaseLink } from '../components/BaseLink'
+import { getAllPosts, PostMetadata } from '../lib/posts'
 
 type Book = {
   title: string
@@ -499,7 +501,11 @@ const Frame = styled.iframe`
   left: 0;
 `
 
-export default function Home() {
+interface HomeProps {
+  posts: PostMetadata[];
+}
+
+export default function Home({ posts }: HomeProps) {
   return (
     <div>
       <Head>
@@ -523,6 +529,27 @@ export default function Home() {
             <BaseLink {...linkProps} href={'https://github.com/tbtstl'}>github</BaseLink> <br />
             <BaseLink {...linkProps} href={'https://twitter.com/tbtstl'}>twitter</BaseLink> <br />
           </Text></div>
+          {posts.length > 0 && (
+            <>
+              <div><Bold>Writing</Bold></div>
+              <div>
+                {posts.map((post) => {
+                  // Extract month and year from date (format: YYYY-MM-DD)
+                  const [year, month] = post.date.split('-');
+                  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                                      'July', 'August', 'September', 'October', 'November', 'December'];
+                  const monthName = monthNames[parseInt(month) - 1];
+                  const formattedDate = `${monthName} ${year}`;
+                  return (
+                    <Text key={post.slug} mb>
+                      {formattedDate} <br />
+                      <BaseLink href={`/p/${post.slug}`}>{post.title}</BaseLink><br />
+                    </Text>
+                  );
+                })}
+              </div>
+            </>
+          )}
           <div><Bold>Reading</Bold></div>
           <div>
             {BOOKS.map((book, idx) => (
@@ -537,4 +564,14 @@ export default function Home() {
       </Container>
     </div>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = getAllPosts();
+
+  return {
+    props: {
+      posts,
+    },
+  };
 }

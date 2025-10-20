@@ -1,0 +1,95 @@
+---
+title: "The Observability Gradient"
+date: "2025-10-09"
+description: ""
+---
+
+Economists classify goods by two traits: Excludability and Rivalry.
+
+> **Excludability**: Can access to this good be restricted?
+
+> **Rivalry**: Does one person's use of this good limit another's?
+
+![](/img/og1.png)
+
+These two traits help us organize assets into a quadrant of four categories: shared goods, public goods, property goods, and access goods.
+
+Each of these categories yield unique market behaviors.
+
+> **Public goods** rely on coordination. Because no one can be excluded and use doesn’t deplete supply, their strength lies in collective participation. They create positive-sum systems where everyone benefits from each contribution. Open-source software, scientific research, and public infrastructure like Bitcoin consensus build shared baselines of trust and knowledge that enable every other market to exist.
+
+> **Shared goods** depend on stewardship. They invite collaborative management because participants recognize that depletion harms all. When managed well, they cultivate long-termism, mutual accountability, and resilience. Community upgrade mechanisms like governance votes function as a stewardship tool, coordinating how shared resources can be managed.
+
+> **Access goods** scale through membership or subscription. They can serve unlimited users, but access can be gated or priced. This creates efficient markets around permissioned entry, such as SaaS platforms, streaming services, or private clubs.
+
+> **Property goods** form the foundation of traditional markets. Ownership is clear, consumption is subtractive, and value is transferable. They are traded, collateralized, and accumulated. Housing, land, and Bitcoin all exist within these market dynamics.
+
+Together, these four categories describe how markets coordinate, share, include, and own. Each carries different incentives, yet all operate within the same informational environment.
+
+Historically, markets were local. Exchange happened among neighbors, clans, and later nations. Information about goods and trade moved slowly—bounded by geography, distance, and cost. What could be known about a market shaped behavior as much as rivalry or excludability.
+
+This created a natural gradient of what could be seen and what remained private—**the observability gradient**. Visibility into ownership, access, and use was limited by cost and friction. It was never formalized because it was constant; everyone operated inside the same informational horizon.
+
+For most of human history, the observability of goods was static. Seeing everything everywhere was expensive, so **privacy was the default state of the world**. Attempts to force visibility—such as centralized record keeping—were costly and often distorted truth (see: [_Seeing Like a State_](https://files.libcom.org/files/Seeing%20Like%20a%20State%20-%20James%20C.%20Scott.pdf)).
+
+## The Collapse of the Observability Gradient
+
+![](/img/og0.png)
+
+The digital era, and especially crypto, drove the cost of observation to zero.  
+Blockchains made ownership, use, and state globally visible, verifiable, and permanent.  
+This **collapsed the natural observability gradient** into a flat plane of total visibility. What was once filtered by geography or cost is now instantly public; every participant shares the same view of the same data at the same time.
+
+This condition is new in human history. Markets have never operated under perfect, permanent observation. Under these conditions, behavior shifts. When actions are performed in public view, participants begin to act for the audience as much as for themselves, and signals that were once by-products of activity become the activity itself.
+
+Over time, these systems begin to coordinate around what is seen instead of what is desired. Markets over-correlate because the informational surface area has flattened into a shared feed. When every actor responds to the same signal, the system loses behavioral diversity – and diversity is what allows systems to scale (See also: [_Goodhart's Law_](https://en.wikipedia.org/wiki/Goodhart%27s_law) and [_Reflexivity_](<https://en.wikipedia.org/wiki/Reflexivity_(social_theory)>)).
+
+## The New Scaling Surface
+
+The collapse of the observability gradient compressed a multi-dimensional economy into a flattened plane.
+
+However, in the same way crypto allowed us to program the representation of value, technologies like zero-knowledge proofs and trusted execution environments are allowing us to program observability via shielding.
+
+This means visibility becomes a design variable instead of a default condition. Actors can choose what to reveal and when, and new forms of coordination, participation, and ownership are unlocked.
+
+To see this more clearly, we can extend the classical framework. By adding _observability_ as a dimension, each category of good expresses two new regimes (one visible, one discreet).
+
+### Public Goods (non-rival, non-excludable)
+
+| Observability  | Behavior                                                                                               | Examples                                                                             |
+| -------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| Observable     | Open civic coordination. Collective systems visible to all, improving accountability and shared trust. | Public health dashboards, open climate data, open-source protocols.                  |
+| Non-observable | Protected participation. Contributions anonymized to reduce bias and protect contributors.             | Anonymous research data donation, whistleblower networks, citizen feedback channels. |
+
+### Shared Goods (rival, non-excludable)
+
+| Observability  | Behavior                                                                                                                          | Examples                                                                                 |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Observable     | Transparent stewardship. Visibility reinforces community norms and responsible use.                                               | Community-managed parks, regenerative agriculture networks, collaborative storage grids. |
+| Non-observable | Private cooperation. Small groups manage shared resources quietly and efficiently, with local trust replacing external oversight. | Cooperative agreements, peer-to-peer energy sharing.                                     |
+
+### Access Goods (non-rival, excludable)
+
+| Observability  | Behavior                                                                                                 | Examples                                                                                       |
+| -------------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Observable     | Open membership ecosystems. Visibility creates reputation loops and attracts contribution.               | Verified research repositories, open-access education platforms, creative commons collectives. |
+| Non-observable | Confidential collaboration. Access controlled, but members act privately to foster innovation or safety. | Encrypted scientific collaborations, patient advocacy networks, private learning cohorts.      |
+
+### Property Goods (rival, excludable)
+
+| Observability  | Behavior                                                                                                                     | Examples                                                                                           |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Observable     | Transparent ownership. Clear provenance enables coordination, safety, and shared infrastructure.                             | Land registries, art provenance ledgers, cooperative housing trusts.                               |
+| Non-observable | Private enterprise. Ownership and use shielded to preserve autonomy and experimentation while maintaining compliance proofs. | Privacy-preserving financial instruments, shielded micro-finance systems, encrypted savings tools. |
+
+---
+
+Each quadrant now supports two legitimate modes of coordination – visible for trust, private for autonomy.
+
+In physical markets, these modes coexisted naturally. Digital systems, by contrast, forced everything into the visible regime.
+
+Programmable observability reopens that space, allowing actors to choose their position on the visibility spectrum.
+
+As the cost of moving along the observability gradient approaches zero, entire new markets appear that can self-select for visibility depending on context.
+
+As SSL scaled the web by restoring privacy to communication, shielding will scale crypto by restoring privacy to ownership and action.

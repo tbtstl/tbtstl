@@ -173,9 +173,12 @@ export default function Post({ post }: PostProps) {
   return (
     <div>
       <Head>
-        <title>{post.title} - tbtstl</title>
+        <title>{`${post.title} - tbtstl`}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         {post.description && <meta name="description" content={post.description} />}
+        <meta property="og:title" content={`${post.title} - tbtstl`} />
+        <meta property="og:type" content="article" />
+        {post.description && <meta property="og:description" content={post.description} />}
       </Head>
       <Container>
         <CanvasContainer>

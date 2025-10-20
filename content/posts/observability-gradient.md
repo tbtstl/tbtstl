@@ -37,6 +37,7 @@ For most of human history, the observability of goods was static. Seeing everyth
 
 ![](/img/og0.png)
 
+
 The digital era, and especially crypto, drove the cost of observation to zero.  
 Blockchains made ownership, use, and state globally visible, verifiable, and permanent.  
 This **collapsed the natural observability gradient** into a flat plane of total visibility. What was once filtered by geography or cost is now instantly public; every participant shares the same view of the same data at the same time.

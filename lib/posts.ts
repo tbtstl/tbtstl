@@ -12,6 +12,7 @@ export interface PostData {
   title: string;
   date: string;
   description?: string;
+  coverImage?: string;
   contentHtml?: string;
 }
 
@@ -20,6 +21,7 @@ export interface PostMetadata {
   title: string;
   date: string;
   description?: string;
+  coverImage?: string;
 }
 
 /**
@@ -46,12 +48,21 @@ export function getAllPosts(): PostMetadata[] {
       const matterResult = matter(fileContents);
 
       // Combine the data with the slug
-      return {
+      const post: PostMetadata = {
         slug,
         title: matterResult.data.title,
         date: matterResult.data.date,
-        description: matterResult.data.description,
-      } as PostMetadata;
+      };
+
+      // Only add optional fields if they exist
+      if (matterResult.data.description) {
+        post.description = matterResult.data.description;
+      }
+      if (matterResult.data.coverImage) {
+        post.coverImage = matterResult.data.coverImage;
+      }
+
+      return post;
     });
 
   // Sort posts by date (newest first)
@@ -82,13 +93,22 @@ export async function getPostBySlug(slug: string): Promise<PostData> {
   const contentHtml = processedContent.toString();
 
   // Combine the data with the slug and contentHtml
-  return {
+  const post: PostData = {
     slug,
     contentHtml,
     title: matterResult.data.title,
     date: matterResult.data.date,
-    description: matterResult.data.description,
   };
+
+  // Only add optional fields if they exist
+  if (matterResult.data.description) {
+    post.description = matterResult.data.description;
+  }
+  if (matterResult.data.coverImage) {
+    post.coverImage = matterResult.data.coverImage;
+  }
+
+  return post;
 }
 
 /**

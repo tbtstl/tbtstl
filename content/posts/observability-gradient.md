@@ -1,7 +1,8 @@
 ---
 title: "The Observability Gradient"
-date: "2025-10-09"
+date: "2025-10-19"
 description: ""
+coverImage: "/img/ogCover.png"
 ---
 
 Economists classify goods by two traits: Excludability and Rivalry.

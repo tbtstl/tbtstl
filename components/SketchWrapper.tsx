@@ -1,25 +1,31 @@
 import React, { useCallback, useRef, useEffect } from 'react'
+import defaultSketch from '../sketches/defaultSketch'
+import createPostSketch from '../sketches/postSketch'
 
 type Sketch = (p: any) => void
 
 type SketchWrapperProps = {
-  sketch: Sketch
+  sketch?: Sketch
+  coverImage?: string
 }
 
 const SketchWrapper = (props: SketchWrapperProps) => {
   const p5Instance = useRef<any | null>(null)
   const wrapperEl = useRef<HTMLDivElement | null>(null)
-  const { sketch } = props
+  const { sketch, coverImage } = props
+
+  // Determine which sketch to use
+  const selectedSketch = sketch || (coverImage ? createPostSketch(coverImage) : defaultSketch)
 
   const setup = useCallback(() => {
     import('p5')
       .then((mod) => {
         const P5 = mod.default as any
         if (wrapperEl.current && !p5Instance.current) {
-          p5Instance.current = new P5(sketch, wrapperEl.current)
+          p5Instance.current = new P5(selectedSketch, wrapperEl.current)
         }
       })
-  }, [sketch])
+  }, [selectedSketch])
 
   useEffect(() => {
     setup()

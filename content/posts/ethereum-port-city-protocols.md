@@ -2,6 +2,7 @@
 title: "Port City Protocols"
 date: "2025-05-09"
 description: ""
+coverImage: "/img/pcpCover.jpg"
 ---
 
 Ethereum protocols are evolving from market stalls to port cities.
@@ -15,7 +16,6 @@ Port City Protocols offer:
 **Controlled borders:** Protocols can set entry rules, charge fees, and verify the safety of incoming assets—similar to how port cities historically managed trade and tariffs.
 
 **Efficient asset management:** Protocols use ERC-6909 to manage multiple assets within a single, organized ledger. This works like historical warehouse receipts, keeping assets safe and easily tradable. Since the entire protocol ruleset can exist within a single contract, there are minimal external calls and gas costs are drastically reduced.
-
 
 ![Port City Protocols](/img/pcp.jpeg)
 

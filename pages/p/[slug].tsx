@@ -2,7 +2,6 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import SketchWrapper from '../../components/SketchWrapper';
-import defaultSketch from '../../sketches/defaultSketch';
 import { getPostBySlug, getAllPostSlugs, PostData } from '../../lib/posts';
 import { BaseLink } from '../../components/BaseLink';
 
@@ -170,8 +169,6 @@ const BackLink = styled(BaseLink)`
 `;
 
 export default function Post({ post }: PostProps) {
-
-  console.log(post.contentHtml);
   
   return (
     <div>
@@ -182,7 +179,7 @@ export default function Post({ post }: PostProps) {
       </Head>
       <Container>
         <CanvasContainer>
-          <SketchWrapper sketch={defaultSketch} />
+          <SketchWrapper coverImage={post.coverImage} />
         </CanvasContainer>
         <ArticleContainer>
           <BackLink href="/">← Back to home</BackLink>

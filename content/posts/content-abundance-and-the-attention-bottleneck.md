@@ -2,8 +2,8 @@
 title: "Content Abundance and the Attention Bottleneck"
 date: "2025-10-09"
 description: ""
+coverImage: "/img/caabCover.png"
 ---
-
 
 In 2015, economist Paul Romer introduced a simple model of knowledge growth called Human Capital and Knowledge. In short, he states that private thoughts in our minds (H) become public artifacts (A), like text, diagrams, or code. Others then use these artifacts to form new thoughts (H+). For example, a chef can share a recipe to teach others, or a videographer can create a movie to capture a story.
 

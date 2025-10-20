@@ -55,12 +55,12 @@ This means visibility becomes a design variable instead of a default condition. 
 
 To see this more clearly, we can extend the classical framework. By adding _observability_ as a dimension, each category of good expresses two new regimes (one visible, one discreet).
 
-| Category     | Observable Behavior                               | Non-observable Behavior                         |
-| ------------ | ------------------------------------------------- | ----------------------------------------------- |
-| **Public**   | Open civic coordination → shared trust            | Protected participation → unbiased input        |
-| **Shared**   | Transparent stewardship → responsible use         | Private cooperation → local efficiency          |
-| **Access**   | Visible membership → contribution loops           | Confidential collaboration → innovation safety  |
-| **Property** | Transparent ownership → provenance & coordination | Private enterprise → autonomy & experimentation |
+| Category     | Observable Behavior                                                           | Non-observable Behavior                                                                |
+| ------------ | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| **Public**   | Open civic coordination → _open-source protocols, climate dashboards_         | Protected participation → _anonymous research data, whistleblower channels_            |
+| **Shared**   | Transparent stewardship → _community-managed parks, regenerative agriculture_ | Private cooperation → _local energy-sharing networks, cooperative water use_           |
+| **Access**   | Visible membership → _open education platforms, creative commons collectives_ | Confidential collaboration → _encrypted research consortia, patient advocacy networks_ |
+| **Property** | Transparent ownership → _land registries, art provenance ledgers_             | Private enterprise → _shielded finance tools, encrypted savings systems_               |
 
 ---
 

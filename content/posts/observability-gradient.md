@@ -55,33 +55,12 @@ This means visibility becomes a design variable instead of a default condition. 
 
 To see this more clearly, we can extend the classical framework. By adding _observability_ as a dimension, each category of good expresses two new regimes (one visible, one discreet).
 
-### Public Goods (non-rival, non-excludable)
-
-| Observability  | Behavior                                                                                               | Examples                                                                             |
-| -------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
-| Observable     | Open civic coordination. Collective systems visible to all, improving accountability and shared trust. | Public health dashboards, open climate data, open-source protocols.                  |
-| Non-observable | Protected participation. Contributions anonymized to reduce bias and protect contributors.             | Anonymous research data donation, whistleblower networks, citizen feedback channels. |
-
-### Shared Goods (rival, non-excludable)
-
-| Observability  | Behavior                                                                                                                          | Examples                                                                                 |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| Observable     | Transparent stewardship. Visibility reinforces community norms and responsible use.                                               | Community-managed parks, regenerative agriculture networks, collaborative storage grids. |
-| Non-observable | Private cooperation. Small groups manage shared resources quietly and efficiently, with local trust replacing external oversight. | Cooperative agreements, peer-to-peer energy sharing.                                     |
-
-### Access Goods (non-rival, excludable)
-
-| Observability  | Behavior                                                                                                 | Examples                                                                                       |
-| -------------- | -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| Observable     | Open membership ecosystems. Visibility creates reputation loops and attracts contribution.               | Verified research repositories, open-access education platforms, creative commons collectives. |
-| Non-observable | Confidential collaboration. Access controlled, but members act privately to foster innovation or safety. | Encrypted scientific collaborations, patient advocacy networks, private learning cohorts.      |
-
-### Property Goods (rival, excludable)
-
-| Observability  | Behavior                                                                                                                     | Examples                                                                                           |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| Observable     | Transparent ownership. Clear provenance enables coordination, safety, and shared infrastructure.                             | Land registries, art provenance ledgers, cooperative housing trusts.                               |
-| Non-observable | Private enterprise. Ownership and use shielded to preserve autonomy and experimentation while maintaining compliance proofs. | Privacy-preserving financial instruments, shielded micro-finance systems, encrypted savings tools. |
+| Category     | Observable Behavior                               | Non-observable Behavior                         |
+| ------------ | ------------------------------------------------- | ----------------------------------------------- |
+| **Public**   | Open civic coordination → shared trust            | Protected participation → unbiased input        |
+| **Shared**   | Transparent stewardship → responsible use         | Private cooperation → local efficiency          |
+| **Access**   | Visible membership → contribution loops           | Confidential collaboration → innovation safety  |
+| **Property** | Transparent ownership → provenance & coordination | Private enterprise → autonomy & experimentation |
 
 ---
 

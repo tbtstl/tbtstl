@@ -16,6 +16,62 @@ type Book = {
 
 const BOOKS: Book[] = [
   {
+    title: 'Permutation City',
+    author: 'Greg Egan',
+    rating: '',
+    year: '2025',
+    href: 'https://www.amazon.com/dp/1597805394?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_3',
+  },
+  {
+    title: 'When We Cease to Understand the World',
+    author: 'Benjamin Labatut',
+    rating: '',
+    year: '2025',
+    href: 'https://www.amazon.com/dp/1681375664?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_11',
+  },
+  {
+    title: 'The MANIAC',
+    author: 'Benjamin Labatut',
+    rating: '',
+    year: '2025',
+    href: 'https://www.amazon.com/dp/0593654498?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_12',
+  },
+  {
+    title: 'The Royal Game: A Chess Story',
+    author: 'Stefan Zweig',
+    rating: '',
+    year: '2025',
+    href: 'https://www.amazon.com/dp/1782278265?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_14',
+  },
+  {
+    title: '4 3 2 1',
+    author: 'Paul Auster',
+    rating: '',
+    year: '2025',
+    href: 'https://www.amazon.com/dp/1250618800?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_18',
+  },
+  {
+    title: 'There Is No Antimemetics Division',
+    author: 'qntm',
+    rating: '',
+    year: '2025',
+    href: 'https://www.amazon.com/dp/B0915M7T61?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_24',
+  },
+  {
+    title: 'The Art of Doing Science and Engineering: Learning to Learn',
+    author: 'Richard Hamming',
+    rating: '',
+    year: '2025',
+    href: 'https://www.amazon.com/dp/1732265178?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_28',
+  },
+  {
+    title: 'Memories, Dreams, Reflections',
+    author: 'Carl G. Jung',
+    rating: '',
+    year: '2025',
+    href: 'https://www.amazon.com/dp/0679723951?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_23',
+  },
+  {
     title: 'Seeing Like a State',
     author: 'James C. Scott',
     rating: '7',

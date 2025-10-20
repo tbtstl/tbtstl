@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app'
 import { createGlobalStyle, keyframes } from 'styled-components'
+import { Analytics } from '@vercel/analytics/next'
 import colors from '../colors'
 
 const fadeIn = keyframes`
@@ -42,6 +43,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <>
       <GlobalStyle />
       <Component {...pageProps} />
+      <Analytics />
     </>
   )
 }

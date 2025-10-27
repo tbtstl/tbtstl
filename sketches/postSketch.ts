@@ -11,10 +11,10 @@ import colors from '../colors'
 const createPostSketch = (imagePath: string) => {
   return (p: any) => {
     const agents: Agent[] = []
-    const agentCount = window.innerWidth *2 
+    const agentCount = window.innerWidth *2
     const noiseScale = 300
     const noiseStrength = 10
-    const dotSize = 1 // dot diameter for circle rendering
+    const strokeWidth = 0.1 // stroke width for line rendering
     const convergenceTime = 1 // seconds to fully converge
 
     let imageLoaded = false
@@ -81,8 +81,10 @@ const createPostSketch = (imagePath: string) => {
     p5SizingDefaults(p, setup)
 
     p.draw = function () {
-      // Clear canvas with solid background (removes tails)
-      p.background(colors.bg)
+      // Create transparent overlay for trailing effect (like defaultSketch)
+      p.fill('rgba(0,0,0,0)')
+      p.noStroke()
+      p.rect(0, 0, p.width, p.height)
 
       // Calculate attraction strength (0 to 1 over convergenceTime seconds)
       const elapsed = (p.millis() - startTime) / 1000
@@ -94,15 +96,15 @@ const createPostSketch = (imagePath: string) => {
       for (let i = 0; i < agentCount; i++) {
         const agent = agents[i]
 
-        // Set fill color for dots
+        // Set stroke color for lines
         const agentColor = agent.color || defaultColors[i % defaultColors.length]
-        p.fill(agentColor)
+        p.stroke(agentColor)
 
-        // Use update3Orbit for gravitational orbital motion
-        agent.update3Orbit(
+        // Use update3OrbitStroke for gravitational orbital motion with line drawing
+        agent.update3OrbitStroke(
           noiseScale * Math.random() * 1.1,
           noiseStrength * Math.random() * 1.1,
-          dotSize, // explicit size for circle rendering
+          strokeWidth, // stroke width for line rendering
           attractionStrength,
           0.7 // stronger gravitational pull (was 0.85)
         )

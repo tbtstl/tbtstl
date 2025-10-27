@@ -139,6 +139,62 @@ class Agent {
     this.updatePosition();
     this.drawAsDot(dotSize);
   }
+
+  update3OrbitStroke(noiseScale: number, noiseStrength: number, strokeWidth: number, attractionStrength: number, orbitStrength: number = 0.85) {
+    // Calculate noise-based angle for organic randomness
+    const noiseAngle = this.p.noise(this.vector.x / noiseScale, this.vector.y / noiseScale) * noiseStrength;
+
+    // If we have a target position, create orbital motion
+    if (this.targetPosition && attractionStrength > 0) {
+      // Calculate vector to target
+      const dx = this.targetPosition.x - this.vector.x;
+      const dy = this.targetPosition.y - this.vector.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      // Prevent division by zero
+      const safeDistance = Math.max(distance, 0.001);
+
+      // Gravitational attraction angle (toward target)
+      const attractAngle = this.p.atan2(dy, dx);
+
+      // Orbital angle (perpendicular, 90° rotation for circular motion)
+      const orbitAngle = attractAngle + this.p.HALF_PI;
+
+      // Blend attraction and orbit based on orbitStrength
+      // orbitStrength close to 1 = more circular orbits
+      // orbitStrength close to 0 = more direct approach
+      const targetAngle = this.p.lerp(attractAngle, orbitAngle, orbitStrength);
+
+      // Cap attraction to preserve organic noise even at full convergence
+      // This ensures agents always have that jittery, organic quality
+      const cappedAttraction = attractionStrength * 0.85;
+      this.angle = this.p.lerp(noiseAngle, targetAngle, cappedAttraction);
+    } else {
+      // No target, use pure noise
+      this.angle = noiseAngle;
+    }
+
+    // Move the agent
+    this.vector.x += this.p.cos(this.angle) * this.stepSize;
+    this.vector.y += this.p.sin(this.angle) * this.stepSize;
+
+    // Check boundaries
+    this.isOutside = this.vector.x < 0 || this.vector.x > this.p.width ||
+                     this.vector.y < 0 || this.vector.y > this.p.height;
+
+    if (this.isOutside) {
+      this.vector.set(this.p.random(this.p.width), this.p.random(this.p.height));
+      this.vectorOld = this.vector.copy();
+    }
+
+    // Draw line from old position to new position
+    this.p.strokeWeight(strokeWidth * this.stepSize);
+    this.p.line(this.vectorOld.x, this.vectorOld.y, this.vector.x, this.vector.y);
+
+    // Update old position
+    this.vectorOld = this.vector.copy();
+    this.isOutside = false;
+  }
 }
 
 export { Agent }

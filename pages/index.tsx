@@ -16,6 +16,34 @@ type Book = {
 
 const BOOKS: Book[] = [
   {
+    title: 'Welcome to the Monkey House',
+    author: 'Kurt Vonnegut',
+    rating: '9',
+    year: '2026',
+    href: 'https://www.amazon.com/Welcome-Monkey-House-Collection-Short/dp/0385333501',
+  },
+  {
+    title: 'What We Talk About When We Talk About Love',
+    author: 'Raymond Carver',
+    rating: '7',
+    year: '2026',
+    href: 'https://www.amazon.com/What-Talk-About-When-Love/dp/0679723056',
+  },
+  {
+    title: 'Project Hail Mary',
+    author: 'Andy Weir',
+    rating: '8',
+    year: '2026',
+    href: 'https://www.amazon.com/Project-Hail-Mary-Andy-Weir/dp/0593135202',
+  },
+  {
+    title: 'Piranesi',
+    author: 'Susanna Clarke',
+    rating: '7',
+    year: '2026',
+    href: 'https://www.amazon.com/Piranesi-Susanna-Clarke/dp/1635577802',
+  },
+  {
     title: 'Permutation City',
     author: 'Greg Egan',
     rating: '',

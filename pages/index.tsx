@@ -16,6 +16,13 @@ type Book = {
 
 const BOOKS: Book[] = [
   {
+    title: 'Stoner',
+    author: 'John Williams',
+    rating: '',
+    year: '2026',
+    href: 'https://www.amazon.com/Stoner-New-York-Review-Classics/dp/1590171993',
+  },
+  {
     title: 'A Moveable Feast',
     author: 'Ernest Hemingway',
     rating: '',

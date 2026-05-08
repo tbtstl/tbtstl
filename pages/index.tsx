@@ -16,6 +16,13 @@ type Book = {
 
 const BOOKS: Book[] = [
   {
+    title: 'The Left Hand of Darkness',
+    author: 'Ursula K. Le Guin',
+    rating: '',
+    year: '2026',
+    href: 'https://www.amazon.com/Left-Hand-Darkness-Ursula-Guin/dp/0441478123',
+  },
+  {
     title: 'Stoner',
     author: 'John Williams',
     rating: '',

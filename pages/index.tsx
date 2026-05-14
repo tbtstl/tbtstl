@@ -16,6 +16,13 @@ type Book = {
 
 const BOOKS: Book[] = [
   {
+    title: 'The Snow Leopard',
+    author: 'Peter Matthiessen',
+    rating: '',
+    year: '2026',
+    href: 'https://www.amazon.com/Snow-Leopard-Peter-Matthiessen/dp/0143105516',
+  },
+  {
     title: 'The Left Hand of Darkness',
     author: 'Ursula K. Le Guin',
     rating: '',

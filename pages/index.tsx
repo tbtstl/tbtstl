@@ -16,6 +16,13 @@ type Book = {
 
 const BOOKS: Book[] = [
   {
+    title: 'The Remains of the Day',
+    author: 'Kazuo Ishiguro',
+    rating: '',
+    year: '2026',
+    href: 'https://www.amazon.com/Remains-Day-Kazuo-Ishiguro/dp/0679731725',
+  },
+  {
     title: 'The Snow Leopard',
     author: 'Peter Matthiessen',
     rating: '',

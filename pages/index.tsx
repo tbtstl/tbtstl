@@ -16,6 +16,13 @@ type Book = {
 
 const BOOKS: Book[] = [
   {
+    title: 'The Unbearable Lightness of Being',
+    author: 'Milan Kundera',
+    rating: '',
+    year: '2026',
+    href: 'https://www.amazon.com/Unbearable-Lightness-Being-Milan-Kundera/dp/0061148520',
+  },
+  {
     title: 'The Remains of the Day',
     author: 'Kazuo Ishiguro',
     rating: '',

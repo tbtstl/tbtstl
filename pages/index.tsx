@@ -16,6 +16,13 @@ type Book = {
 
 const BOOKS: Book[] = [
   {
+    title: 'The Master and Margarita',
+    author: 'Mikhail Bulgakov',
+    rating: '',
+    year: '2026',
+    href: 'https://www.amazon.com/Master-Margarita-Mikhail-Bulgakov/dp/0143108271',
+  },
+  {
     title: 'The Unbearable Lightness of Being',
     author: 'Milan Kundera',
     rating: '',

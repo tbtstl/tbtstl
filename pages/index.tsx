@@ -654,11 +654,10 @@ export default function Home({ posts }: HomeProps) {
         <InfoContainer>
           <div><Bold>About</Bold></div>
           <div><Text>
-            tbtstl is co-founder and CTO of <BaseLink {...linkProps} href={'https://zora.co'}>Zora</BaseLink>.
+            tbtstl is working on post-chat interfaces for human agency. Previously co-founder and CTO of <BaseLink {...linkProps} href={'https://zora.co'}>zora</BaseLink>.
           </Text></div>
           <div><Bold>Contact</Bold></div>
           <div><Text>
-            <BaseLink {...linkProps} href={'https://zora.co/tyson.eth'}>zora</BaseLink> <br />
             <BaseLink {...linkProps} href={'https://github.com/tbtstl'}>github</BaseLink> <br />
             <BaseLink {...linkProps} href={'https://twitter.com/tbtstl'}>twitter</BaseLink> <br />
           </Text></div>

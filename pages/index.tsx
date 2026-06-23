@@ -41,7 +41,7 @@ const BOOKS: Book[] = [
     author: 'Peter Matthiessen',
     rating: '',
     year: '2026',
-    href: 'https://www.amazon.com/Snow-Leopard-Peter-Matthiessen/dp/0143105516',
+    href: 'https://www.amazon.com/Snow-Leopard-Penguin-Classics/dp/0143105515/ref=sr_1_2?dib=eyJ2IjoiMSJ9.UUgPUfiwc0Mzh219ZBr9zbULqE8WjAdJy9Hh_VYyqMmyFFB7rPVKb10RJbuDeehj1N4nSzYvk7Wvlcb2P7WvVzP1Eoa3e_rZYA7uOE60lfsgeIOEb9GwswYqXLfT2KTAWkI0IyFeAehZ_tE4pSUXubYLvNfVbefVF0_b7QfqurludX9ERKonwCYYzkDBONEle39w_5HwsjadGjlbzvA5XCttQQfsRSaojDM8a1xdEh8.lpUYD5M37FatYnsbD4C7rZKAeRRRB6tnRakAXls4cuA&dib_tag=se&keywords=the+snow+leopard&qid=1778782399&sr=8-2',
   },
   {
     title: 'The Left Hand of Darkness',

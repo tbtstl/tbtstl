@@ -4,6 +4,8 @@ import { GetStaticProps } from 'next'
 import SketchWrapper from '../components/SketchWrapper'
 import defaultSketch from '../sketches/defaultSketch'
 import { BaseLink } from '../components/BaseLink'
+import { formatMonthYear } from '../lib/dates'
+import { ExperimentMetadata, getAllExperiments } from '../lib/experiments'
 import { getAllPosts, PostMetadata } from '../lib/posts'
 
 type Book = {
@@ -619,7 +621,7 @@ const CanvasContainer = styled.div`
 const InfoContainer = styled.div`
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: max-content minmax(0, 1fr);
   max-width: 400px;
 `
 
@@ -635,10 +637,11 @@ const Frame = styled.iframe`
 `
 
 interface HomeProps {
+  experiments: ExperimentMetadata[];
   posts: PostMetadata[];
 }
 
-export default function Home({ posts }: HomeProps) {
+export default function Home({ experiments, posts }: HomeProps) {
   return (
     <div>
       <Head>
@@ -661,20 +664,28 @@ export default function Home({ posts }: HomeProps) {
             <BaseLink {...linkProps} href={'https://github.com/tbtstl'}>github</BaseLink> <br />
             <BaseLink {...linkProps} href={'https://twitter.com/tbtstl'}>twitter</BaseLink> <br />
           </Text></div>
+          {experiments.length > 0 && (
+            <>
+              <div><Bold>Experiments</Bold></div>
+              <div>
+                {experiments.map((experiment) => (
+                  <Text key={experiment.slug} mb>
+                    {formatMonthYear(experiment.inceptionDate)} <br />
+                    <BaseLink href={`/experiments/${experiment.slug}`}>{experiment.title}</BaseLink><br />
+                    {experiment.homepageBlurb}
+                  </Text>
+                ))}
+              </div>
+            </>
+          )}
           {posts.length > 0 && (
             <>
               <div><Bold>Writing</Bold></div>
               <div>
                 {posts.map((post) => {
-                  // Extract month and year from date (format: YYYY-MM-DD)
-                  const [year, month] = post.date.split('-');
-                  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-                                      'July', 'August', 'September', 'October', 'November', 'December'];
-                  const monthName = monthNames[parseInt(month) - 1];
-                  const formattedDate = `${monthName} ${year}`;
                   return (
                     <Text key={post.slug} mb>
-                      {formattedDate} <br />
+                      {formatMonthYear(post.date)} <br />
                       <BaseLink href={`/p/${post.slug}`}>{post.title}</BaseLink><br />
                     </Text>
                   );
@@ -699,10 +710,12 @@ export default function Home({ posts }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
+  const experiments = getAllExperiments();
   const posts = getAllPosts();
 
   return {
     props: {
+      experiments,
       posts,
     },
   };

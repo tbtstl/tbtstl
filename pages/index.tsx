@@ -657,7 +657,7 @@ export default function Home({ experiments, posts }: HomeProps) {
         <InfoContainer>
           <div><Bold>About</Bold></div>
           <div><Text>
-            tbtstl is working on post-chat interfaces for human agency. Previously co-founder and CTO of <BaseLink {...linkProps} href={'https://zora.co'}>zora</BaseLink>.
+            tbtstl is currently building tools for learning and research. Previously co-founder and CTO of <BaseLink {...linkProps} href={'https://zora.co'}>zora</BaseLink>.
           </Text></div>
           <div><Bold>Contact</Bold></div>
           <div><Text>

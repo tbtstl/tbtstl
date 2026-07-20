@@ -622,10 +622,19 @@ const InfoContainer = styled.div`
   display: grid;
   grid-gap: 20px;
   grid-template-columns: max-content minmax(0, 1fr);
-  max-width: 400px;
+  max-width: 600px;
 `
 
 const linkProps = { target: '_blank', rel: 'noopener noreferrer' as const }
+
+const formatExperimentTitle = (title: string) => {
+  if (title.toLowerCase() === 'kv') return 'KV'
+
+  return title
+    .split('-')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+}
 
 const Frame = styled.iframe`
   width: 100% !important;
@@ -671,8 +680,10 @@ export default function Home({ experiments, posts }: HomeProps) {
                 {experiments.map((experiment) => (
                   <Text key={experiment.slug} mb>
                     {formatMonthYear(experiment.inceptionDate)} <br />
-                    <BaseLink href={`/experiments/${experiment.slug}`}>{experiment.title}</BaseLink><br />
-                    {experiment.homepageBlurb}
+                    <BaseLink href={`/experiments/${experiment.slug}`}>
+                      {formatExperimentTitle(experiment.title)}
+                    </BaseLink>
+                    {' – '}{experiment.homepageBlurb}
                   </Text>
                 ))}
               </div>

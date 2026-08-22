@@ -14,6 +14,10 @@ rot turns a source into a feed of short lessons, videos, and multiple-choice que
 
 ## Changelog
 
+### August 15–21, 2026
+
+- YouTube course generation is now more reliable: extraction uses bundled tooling, and temporary provider outages return a retryable error instead of marking a video as unsupported.
+
 ### July 18–24, 2026
 
 - Added a course catalog and a vertical learning stream that adapts practice to progress, preserves the reading position, and explains answers.

@@ -18,11 +18,25 @@ type Book = {
 
 const BOOKS: Book[] = [
   {
+    title: 'Axiomatic',
+    author: 'Greg Egan',
+    rating: '',
+    year: '2026',
+    href: 'https://www.amazon.com/Axiomatic-Greg-Egan/dp/0061052655',
+  },
+  {
     title: 'The Master and Margarita',
     author: 'Mikhail Bulgakov',
     rating: '',
     year: '2026',
     href: 'https://www.amazon.com/Master-Margarita-Mikhail-Bulgakov/dp/0143108271',
+  },
+  {
+    title: 'Lamb: The Gospel According to Biff, Christ’s Childhood Pal',
+    author: 'Christopher Moore',
+    rating: '',
+    year: '2026',
+    href: 'https://www.amazon.com/Lamb-Gospel-According-Christs-Childhood-ebook/dp/B000OVLK2W',
   },
   {
     title: 'The Unbearable Lightness of Being',

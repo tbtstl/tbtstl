@@ -5,7 +5,7 @@ inceptionDate: "2026-05-22"
 homepageBlurb: "A self-directed wiki with an agent that edits and creates articles."
 projectUrl: "https://office-hours.io/"
 projectLinkLabel: "Visit office-hours"
-order: 2
+order: 5
 ---
 
 I wanted a self-directed Wikipedia for rabbit holes, with an agent that could edit and create articles as I used it.

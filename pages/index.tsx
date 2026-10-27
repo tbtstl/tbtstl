@@ -642,8 +642,6 @@ const InfoContainer = styled.div`
 const linkProps = { target: '_blank', rel: 'noopener noreferrer' as const }
 
 const formatExperimentTitle = (title: string) => {
-  if (title.toLowerCase() === 'kv') return 'KV'
-
   return title
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))

@@ -5,7 +5,7 @@ inceptionDate: "2026-06-15"
 homepageBlurb: "A feed for source material and comprehension checks."
 projectUrl: "https://rot.now/"
 projectLinkLabel: "Visit rot"
-order: 1
+order: 4
 ---
 
 I was consuming more papers and podcasts than I could absorb. I built rot to test whether they could share one interface—brainrot—and whether questions drawn from each source measured my understanding.
@@ -14,8 +14,9 @@ rot turns a source into a feed of short lessons, videos, and multiple-choice que
 
 ## Changelog
 
-### August 15–21, 2026
+### August 14–21, 2026
 
+- Featured feeds can now be read without signing in.
 - YouTube course generation is now more reliable: extraction uses bundled tooling, and temporary provider outages return a retryable error instead of marking a video as unsupported.
 
 ### July 18–24, 2026
